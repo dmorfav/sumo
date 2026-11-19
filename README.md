@@ -58,6 +58,10 @@ The skill:
 5. Checks every citation with `scripts/verify.py`, reopens the decisive ones by hand and, for costly decisions, asks an agent running a different model for an audit.
 6. Delivers the verdict and saves the bout (framing, transcript, evidence and verdict) in `dohyo/<date>-<slug>/`.
 
+## Security
+
+The fighters read the material you give them (repositories, documents, URLs), and that material may contain text written by others, including instructions aimed at AI agents (indirect prompt injection). The skill tells the fighters and the orchestrator to treat all material, transcripts and reports as data: instructions found there are never followed, they are cited as evidence and flagged in the verdict. Fighters work read-only, open only the material you list and do not install or send anything. Even so, point sumo at material you trust, as you would with any agent that reads third-party content.
+
 ## Structure
 
 ```text

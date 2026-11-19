@@ -1,0 +1,17 @@
+{
+  "name": "sumo",
+  "owner": {
+    "name": "Daniel Morfa Vega",
+    "url": "https://github.com/dmorfav"
+  },
+  "metadata": {
+    "description": "Adversarial debate between agents with fixed positions, for technical decisions with guarantees."
+  },
+  "plugins": [
+    {
+      "name": "sumo",
+      "source": "./",
+      "description": "Adversarial debate between two agents with fixed positions and an audited verdict."
+    }
+  ]
+}

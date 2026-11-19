@@ -1,0 +1,8 @@
+# Saved bouts: they often contain internal details of the project under evaluation
+dohyo/
+# Skill evaluation workspaces
+*-workspace/
+.DS_Store
+.claude/settings.local.json
+.claude/worktrees/
+__pycache__/

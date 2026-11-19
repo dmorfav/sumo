@@ -74,7 +74,7 @@ tests/
 ├── scripts/
 │   ├── test_verify.sh        # tests verify.py with good, invented and non-existent citations
 │   └── test_bout.sh          # tests bout.sh and the text report when SubagentHandback is missing
-└── fixtures/invoicer/        # small synthetic repository the script tests cite
+└── fixtures/shapes/          # tiny module the script tests cite by path and line
 docs/research/
 ├── debate-techniques.md      # background research (argumentation, debate, negotiation, debate between LLMs)
 └── bibliography-audit.md     # independent audit of its 38 citations

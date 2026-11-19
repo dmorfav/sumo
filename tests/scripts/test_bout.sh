@@ -4,13 +4,13 @@
 set -euo pipefail
 cd "$(dirname "$0")/../.."
 S=skills/sumo/scripts
-MAT=tests/fixtures/invoicer
+MAT=tests/fixtures/shapes
 D="$(mktemp -d)"; trap 'rm -rf "$D"' EXIT
 
 cat > "$D/c.jsonl" <<'EOF'
-{"type":"assistant","timestamp":"2026-01-01T00:01:00Z","message":{"content":[{"type":"tool_use","name":"SendMessage","input":{"to":"B","message":"C1: tests/test_calc.py:15 → «assert total(lines) == 1.27»"}}]}}
+{"type":"assistant","timestamp":"2026-01-01T00:01:00Z","message":{"content":[{"type":"tool_use","name":"SendMessage","input":{"to":"B","message":"C1: tests/test_shapes.py:15 → «assert square_area(side) == expected»"}}]}}
 {"type":"assistant","timestamp":"2026-01-01T00:03:00Z","message":{"content":[{"type":"tool_use","name":"SendMessage","input":{"to":"B","message":"C2 rebuttal"}}]}}
-{"type":"assistant","timestamp":"2026-01-01T00:05:00Z","message":{"content":[{"type":"text","text":"FINAL REPORT\nFinal position: rewrite. calc.py:400"}]}}
+{"type":"assistant","timestamp":"2026-01-01T00:05:00Z","message":{"content":[{"type":"text","text":"FINAL REPORT\nFinal position: rewrite. shapes.py:400"}]}}
 EOF
 cat > "$D/d.jsonl" <<'EOF'
 {"type":"assistant","timestamp":"2026-01-01T00:02:00Z","message":{"content":[{"type":"tool_use","name":"SendMessage","input":{"to":"A","message":"D1"}}]}}

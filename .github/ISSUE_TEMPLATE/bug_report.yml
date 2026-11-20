@@ -1,0 +1,67 @@
+name: Bug report
+description: Something in the skill or its scripts does not work as documented.
+title: "bug: "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for reporting. **Security problems go through [SECURITY.md](https://github.com/dmorfav/sumo/security/policy), not here.**
+        Remove internal details of the project you evaluated before pasting transcripts.
+  - type: dropdown
+    id: component
+    attributes:
+      label: Component
+      options:
+        - Referee flow (SKILL.md)
+        - Fighter prompts / playbook / catalog
+        - bout.sh
+        - verify.py
+        - Installation (plugin / skills.sh)
+        - Other
+    validations:
+      required: true
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened
+      description: What you expected and what happened instead.
+    validations:
+      required: true
+  - type: textarea
+    id: repro
+    attributes:
+      label: Steps to reproduce
+      description: The motion you used, the material (if shareable) and the steps.
+      placeholder: |
+        1. sumo: should we ...
+        2. ...
+    validations:
+      required: true
+  - type: textarea
+    id: logs
+    attributes:
+      label: Relevant output
+      description: Output of bout.sh / verify.py or the part of the transcript that shows the problem.
+      render: text
+  - type: input
+    id: agent
+    attributes:
+      label: Agent and version
+      placeholder: "Claude Code 2.x / other (relay mode)"
+    validations:
+      required: true
+  - type: input
+    id: env
+    attributes:
+      label: Environment
+      placeholder: "macOS 15, Python 3.12, jq 1.7"
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Checks
+      options:
+        - label: I searched existing issues and this is not a duplicate.
+          required: true
+        - label: I removed confidential details from the material and transcripts.
+          required: true

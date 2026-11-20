@@ -93,6 +93,10 @@ The playbook rests on argumentation theory (Toulmin, pragma-dialectics, Walton's
 
 An agent running a different model audited the bibliography. Its corrections are applied, and what could not be verified is still marked as "unverified".
 
+## Contributing
+
+Contributions are welcome: read [CONTRIBUTING.md](CONTRIBUTING.md) and the [Code of Conduct](CODE_OF_CONDUCT.md). Report security problems privately as described in [SECURITY.md](SECURITY.md).
+
 ## License
 
 MIT
